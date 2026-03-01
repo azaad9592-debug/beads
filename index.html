@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhtaram Bags & Beads</title>
+    <!-- Premium Fonts: Playfair Display for luxury headings, Outfit for clean body text -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="luxury-header">
+        <div class="logo">
+            <h1>Muhtaram Bags & Beads</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Collection</a></li>
+                <li><a href="#order">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <img src="./assets/hero_bg.png" alt="Luxury bags on natural stones" class="hero-image">
+            <div class="hero-content">
+                <span class="hero-subtitle">Premium Collection</span>
+                <h2 class="hero-main-title">Exquisite & Unique Bags</h2>
+                <p>Discover our exclusive collection of luxury women's bags and traditional Gujri beads, crafted to
+                    absolute perfection.</p>
+                <a href="#products" class="cta-btn">Explore Collection</a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="section-title">
+                <h2>The Signature Edit</h2>
+                <div class="title-divider"></div>
+                <p>Elegance redefined in every stitch and bead.</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card fade-up">
+                    <div class="img-wrapper">
+                        <img src="./assets/bag1.png" alt="Premium Bag">
+                    </div>
+                    <div class="product-info">
+                        <h3>Elegance Handbag</h3>
+                        <p>A gorgeous, minimalist luxury handbag perfect for any sophisticated occasion.</p>
+                        <a href="#order" class="order-btn" onclick="selectProduct('Elegance Handbag')">Order This
+                            Piece</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card fade-up" style="animation-delay: 0.1s;">
+                    <div class="img-wrapper">
+                        <img src="./assets/bag2.png" alt="Beaded Bag">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pearl Bead Clutch</h3>
+                        <p>Intricate beadwork combining traditional craftsmanship with modern luxury.</p>
+                        <a href="#order" class="order-btn" onclick="selectProduct('Pearl Bead Clutch')">Order This
+                            Piece</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card fade-up" style="animation-delay: 0.2s;">
+                    <div class="img-wrapper">
+                        <img src="./assets/beads1.png" alt="Gujri Beads">
+                    </div>
+                    <div class="product-info">
+                        <h3>Traditional Gujri Beads</h3>
+                        <p>Handcrafted, colorful traditional jewelry carrying the essence of heritage.</p>
+                        <a href="#order" class="order-btn" onclick="selectProduct('Traditional Gujri Beads')">Order This
+                            Piece</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section id="order" class="order-section">
+            <div class="order-container glass-effect">
+                <div class="order-header">
+                    <h2>Place Your Order</h2>
+                    <div class="title-divider"></div>
+                    <p>Fill out the details below to securely request your piece via email.</p>
+                </div>
+
+                <form id="orderForm" onsubmit="submitOrder(event)" class="luxury-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="Jane Doe">
+                        </div>
+                        <div class="input-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" required placeholder="e.g. Lahore">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="productSelect">Select Product</label>
+                        <div class="custom-select">
+                            <select id="productSelect" required>
+                                <option value="" disabled selected>Choose a beautiful item...</option>
+                                <option value="Elegance Handbag">Elegance Handbag</option>
+                                <option value="Pearl Bead Clutch">Pearl Bead Clutch</option>
+                                <option value="Traditional Gujri Beads">Traditional Gujri Beads</option>
+                                <option value="Other">Other / Request Details</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="address">Delivery Address</label>
+                        <textarea id="address" rows="3" required
+                            placeholder="Complete residential address..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Send Order via Email</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <p class="email-fallback">azaad9592@gmail.com</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="luxury-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Muhtaram Bags & Beads</h2>
+            </div>
+            <p class="copyright">&copy; 2026 Muhtaram Bags & Beads. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
